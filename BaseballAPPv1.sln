@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35201.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballAPP.API", "BaseballAPP.API\BaseballAPP.API.csproj", "{173C6C00-CC50-4624-9237-F91AB20702C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasebalApp.Service", "BasebalApp.Service\BasebalApp.Service.csproj", "{5EB66E97-2AFD-40FB-BE3F-93B0892FEA04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseballApp.Service", "BaseballApp.Service\BaseballApp.Service.csproj", "{5EB66E97-2AFD-40FB-BE3F-93B0892FEA04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

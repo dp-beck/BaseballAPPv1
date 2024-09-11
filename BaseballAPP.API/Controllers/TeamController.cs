@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BaseballApp.Service.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 
 namespace BaseballAPP.API.Controllers
 {
@@ -7,7 +9,7 @@ namespace BaseballAPP.API.Controllers
     [ApiController]
     public class TeamController : ControllerBase
     {
-        private List<string> Players = [];
+        private List<PlayerModel> Players = [];
 
         [HttpGet("GetNamePlayer")]
         public string GetNameofPlayer()
@@ -16,21 +18,23 @@ namespace BaseballAPP.API.Controllers
         }
 
         [HttpGet("GetListPlayers")]
-        public List<string> GetPlayerGetNameofPlayersofPlayer()
+        public List<PlayerModel> GetListOfPlayers()
         {
             return Players;
         }
 
 
         [HttpPost]
-        public bool CreateNewPlayer(string Name)
+        public bool CreateNewPlayer(string name, string position)
         {
-            if (string.IsNullOrWhiteSpace(Name))
+            PlayerModel player = new PlayerModel(name, position);
+
+            if (player is null)
             {
                 return false;
             }
 
-            Players.Add(Name);
+            Players.Add(player);
             return true;
         }
     }
